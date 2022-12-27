@@ -20,14 +20,13 @@ const client = new MongoClient(uri, {
 
 async function run() {
 	try {
-		const roomCollection = client.db("hotelRoomBooking").collection("rooms");
+		const roomCollection = client.db("trueSmile").collection("services");
 
-		app.get("/rooms", async (req, res) => {
+		app.get("/services", async (req, res) => {
 			const query = {};
-			const cursor = roomCollection.find(query);
-			const rooms = await cursor.toArray();
-			const count = await roomCollection.estimatedDocumentCount();
-			res.send({ count, rooms });
+			const cursor = serviceCollection.find(query);
+			const services = await cursor.toArray();
+			res.send(services);
 		});
 	} finally {
 	}
