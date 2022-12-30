@@ -3,7 +3,6 @@ const cors = require("cors");
 const { ServerApiVersion, ObjectId } = require("mongodb");
 const MongoClient = require("mongodb").MongoClient;
 require("dotenv").config();
-// const config = require("./config.js");
 
 // const port = process.env.PORT || 5000;
 const port = 5000;
@@ -103,6 +102,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
 	console.log(`Listing from port ${port}`);
 });
-
-// Repo Link
-//https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-rasedprogrammer
